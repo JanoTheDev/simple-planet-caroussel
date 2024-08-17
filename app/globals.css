@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.spinner {
+  animation: spin 0.5s linear 1;
+}
+.reversespinner {
+  animation: reversespin 0.5s linear 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translateX(0);
+    opacity: 100;
+  }
+  30% {
+    transform: rotate(240deg) translateX(0);
+    opacity: 100;
+  }
+  50% {
+    transform: rotate(360deg) translateX(0);
+    opacity: 90;
+  }
+  70% {
+    transform: rotate(360deg) translateX(0);
+    opacity: 60;
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes reversespin {
+  0% {
+    transform: rotate(0deg) translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(0deg) translateX(0);
+    opacity: 70;
+  }
+  70% {
+    transform: rotate(-240deg) translateX(0);
+    opacity: 90;
+  }
+  100% {
+    transform: rotate(-360deg) translateX(0);
+    opacity: 100;
+  }
+}
+
+.text {
+  animation: text 0.5s linear 1;
+}
+.reversetext {
+  animation: reversetext 0.5s linear 1;
+}
+
+@keyframes text {
+  0% {
+    transform: rotate(0deg) translateX(0);
+    opacity: 100;
+  }
+  30% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes reversetext {
+  0% {
+    transform: rotate(0deg) translateX(-150px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100;
+  }
+}
+
+
+.description {
+  animation: description 0.5s linear 1;
+}
+.reversedescription {
+  animation: reversedescription 0.5s linear 1;
+}
+
+@keyframes description {
+  0% {
+    transform: rotate(0deg) translateY(0);
+    opacity: 100;
+  }
+  30% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes reversedescription {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0px);
+    opacity: 30;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100;
+  }
+}
